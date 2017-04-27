@@ -47,10 +47,10 @@ public class SwitchControlActivity extends AppCompatActivity {
         }
 
         //Set the pins in real-time database
-        for (Switch switches : mSwitches) {
-            DatabaseReference switchRef = mDatabaseRef.child(switches.getName()).getRef();
-            switchRef.setValue(switches);
-        }
+//        for (Switch switches : mSwitches) {
+//            DatabaseReference switchRef = mDatabaseRef.child(switches.getName()).getRef();
+//            switchRef.setValue(switches);
+//        }
 
         //Set the change listener.
         mDatabaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -58,6 +58,8 @@ public class SwitchControlActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (Switch s : mSwitches) {
                     Switch dataSwitch = dataSnapshot.child(s.getName()).getValue(Switch.class);
+
+                    Log.d("FB Switch", dataSnapshot.toString());
 
                     //Check changed pin by the pin name
                     if (s.getName().equals(dataSwitch.getName())) {

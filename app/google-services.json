@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1008139578801",
+    "firebase_url": "https://molten-precinct-135323.firebaseio.com",
+    "project_id": "molten-precinct-135323",
+    "storage_bucket": "molten-precinct-135323.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008139578801:android:70bbcbc6e486eb07",
+        "android_client_info": {
+          "package_name": "com.kevalpatel2106.smartswitch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008139578801-kjdo40auggfbhhfq5apg5e9226smgtan.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kevalpatel2106.smartswitch",
+            "certificate_hash": "dc0680a827533bcc9ff8da507849196ca10f19de"
+          }
+        },
+        {
+          "client_id": "1008139578801-0dmh86fpn47br6joo977sdp7hhd9f5qm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTz0Rjymne6uW7o74XspyL9Cx7HUn_gos"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008139578801-0dmh86fpn47br6joo977sdp7hhd9f5qm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008139578801:android:7650f61b79782665",
+        "android_client_info": {
+          "package_name": "com.kevalpatel2106.smartswitchthing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008139578801-amrmmmn19cheoqcr3nprs36virmaudfr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kevalpatel2106.smartswitchthing",
+            "certificate_hash": "dc0680a827533bcc9ff8da507849196ca10f19de"
+          }
+        },
+        {
+          "client_id": "1008139578801-0dmh86fpn47br6joo977sdp7hhd9f5qm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTz0Rjymne6uW7o74XspyL9Cx7HUn_gos"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008139578801-0dmh86fpn47br6joo977sdp7hhd9f5qm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
