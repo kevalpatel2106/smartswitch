@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.kevalpatel2106.smartswitchthing;
+package com.kevalpatel2106.smartswitchthings;
 
 import android.os.Build;
 

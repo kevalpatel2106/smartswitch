@@ -1,17 +1,34 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        signcofig {
+            keyAlias 'smartswitch'
+            keyPassword 'smartswitch'
+            if (!System.getenv("IS_CI_BUILD").equals("true")) {
+                storeFile file('F:/Proj/SmartSwitch/android-thing-sample.jks')
+            }else {
+                storeFile file(System.getenv("KEY_STORE"))
+
+            }
+            storePassword 'smartswitch'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "com.kevalpatel2106.smartswitchthing"
+        applicationId "com.kevalpatel2106.smartswitchthings"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
+        debug {
+            signingConfig signingConfigs.signcofig
+        }
         release {
+            signingConfig signingConfigs.signcofig
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

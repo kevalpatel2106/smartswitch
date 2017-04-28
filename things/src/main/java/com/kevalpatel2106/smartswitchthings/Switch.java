@@ -1,10 +1,8 @@
-package com.kevalpatel2106.smartswitchthing;
+package com.kevalpatel2106.smartswitchthings;
 
 import android.support.annotation.NonNull;
-import android.util.Log;
 
 import com.google.android.things.pio.Gpio;
-import com.google.android.things.pio.GpioCallback;
 import com.google.android.things.pio.PeripheralManagerService;
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;

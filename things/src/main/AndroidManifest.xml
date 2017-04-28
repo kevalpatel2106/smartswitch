@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.kevalpatel2106.smartswitchthing">
+          package="com.kevalpatel2106.smartswitchthings">
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,7 @@
 
         <uses-library android:name="com.google.android.things"/>
 
-        <activity android:name="com.kevalpatel2106.smartswitchthing.SwitchControlActivity">
+        <activity android:name="com.kevalpatel2106.smartswitchthings.SwitchControlActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

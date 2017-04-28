@@ -1,4 +1,4 @@
-package com.kevalpatel2106.smartswitchthing;
+package com.kevalpatel2106.smartswitchthings;
 
 /**
  * Created by Keval on 27-Apr-17.

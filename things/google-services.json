@@ -52,17 +52,17 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1008139578801:android:7650f61b79782665",
+        "mobilesdk_app_id": "1:1008139578801:android:cf590e2086adc367",
         "android_client_info": {
-          "package_name": "com.kevalpatel2106.smartswitchthing"
+          "package_name": "com.kevalpatel2106.smartswitchthings"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1008139578801-amrmmmn19cheoqcr3nprs36virmaudfr.apps.googleusercontent.com",
+          "client_id": "1008139578801-3hggdvp81kedahebssfdckoefqrjj9la.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.kevalpatel2106.smartswitchthing",
+            "package_name": "com.kevalpatel2106.smartswitchthings",
             "certificate_hash": "dc0680a827533bcc9ff8da507849196ca10f19de"
           }
         },
