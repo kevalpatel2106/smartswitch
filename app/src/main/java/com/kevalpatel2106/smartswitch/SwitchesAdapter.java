@@ -1,6 +1,8 @@
 package com.kevalpatel2106.smartswitch;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,8 +25,7 @@ public class SwitchesAdapter extends RecyclerView.Adapter<SwitchesAdapter.Switch
     private final ArrayList<Switch> mSwitches;
     private final DatabaseReference mDatabaseReference;
 
-    public SwitchesAdapter(Context context, ArrayList<Switch> switches, DatabaseReference reference) {
-
+    public SwitchesAdapter(Context context, ArrayList<Switch> switches,DatabaseReference reference) {
         mContext = context;
         mSwitches = switches;
         mDatabaseReference = reference;
@@ -39,8 +40,9 @@ public class SwitchesAdapter extends RecyclerView.Adapter<SwitchesAdapter.Switch
     public void onBindViewHolder(SwitchesAdapter.SwitchViewHolder holder, int position) {
         final Switch switch1 = mSwitches.get(position);
 
-        holder.mSwitchTextView.setText(switch1.getName());
-        holder.mSwitchToggel.setText(switch1.getStatus() ? "ON" : "OFF");
+        holder.mSwitchTextView.setText(switch1.getName().toUpperCase().replace("PIN",""));
+
+        holder.mSwitchToggel.setBackgroundDrawable(switch1.getIcon());
         holder.mSwitchToggel.setOnCheckedChangeListener(null);
         holder.mSwitchToggel.setChecked(switch1.getStatus());
         holder.mSwitchToggel.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -70,6 +72,13 @@ public class SwitchesAdapter extends RecyclerView.Adapter<SwitchesAdapter.Switch
 
             mSwitchTextView = (AppCompatTextView) itemView.findViewById(R.id.switch_name_tv);
             mSwitchToggel = (ToggleButton) itemView.findViewById(R.id.switch_status_toggel);
+
+            ViewGroup.LayoutParams params = mSwitchToggel.getLayoutParams();
+            int square = Resources.getSystem().getDisplayMetrics().widthPixels / 2;
+            params.width = square;
+            params.height = square;
+            mSwitchToggel.setLayoutParams(params);
+
         }
     }
 }
