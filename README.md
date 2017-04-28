@@ -4,4 +4,4 @@
 
 ## Circuit Diagram: 
 
-![circuit](misc/SmartSwitch_diagram)
+![circuit](misc/SmartSwitch_diagram.png)
