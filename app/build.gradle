@@ -6,7 +6,15 @@ android {
             keyAlias 'smartswitch'
             keyPassword 'smartswitch'
             if (!System.getenv("IS_CI_BUILD").equals("true")) {
-                storeFile file('F:/Proj/SmartSwitch/android-thing-sample.jks')
+                //If this is the local build, load it from the keystore.properties file
+                File signFile = rootProject.file('local.properties')
+                if (signFile.exists()) {
+                    Properties props = new Properties()
+                    props.load(new FileInputStream(signFile))
+                    storeFile file(props.getProperty("keystore.path"))
+                } else {
+                    throw new GradleException("local.properties file not found.")
+                }
             }else {
                 storeFile file(System.getenv("KEY_STORE"))
 
