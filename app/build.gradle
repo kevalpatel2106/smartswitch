@@ -8,6 +8,7 @@ android {
             if (!System.getenv("IS_CI_BUILD").equals("true")) {
                 //If this is the local build, load it from the keystore.properties file
                 File signFile = rootProject.file('local.properties')
+
                 if (signFile.exists()) {
                     Properties props = new Properties()
                     props.load(new FileInputStream(signFile))
