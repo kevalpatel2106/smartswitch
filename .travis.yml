@@ -28,11 +28,7 @@ licenses:
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
     - 'intel-android-extra-license'
-    
-before_script:
-    - chmod +x ./misc/download_keystore.sh
-    - bash ./misc/download_keystore.sh
-    - chmod +x gradlew      #Grant permissions
-    
+
 script:
+    - chmod +x gradlew      #Grant permissions
     - ./gradlew app:assembleDebug things:assembleDebug -PdisablePreDex --stacktrace
