@@ -1,7 +1,11 @@
 package com.kevalpatel2106.smartswitch;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 
+import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.io.IOException;
@@ -27,6 +31,12 @@ public class Switch {
     private boolean status;
 
     /**
+     * This is the icon to indicate the item.
+     */
+    @Exclude
+    private Drawable icon;
+
+    /**
      * Public constructor.
      *
      * @param switchName Name of the switch.
@@ -34,9 +44,11 @@ public class Switch {
      * @throws IOException
      */
     public Switch(@NonNull String switchName,
-                  boolean status) {
+                  boolean status,
+                  Drawable icon) {
         this.name = switchName;
         this.status = status;
+        this.icon = icon;
     }
 
     public Switch() {
@@ -68,8 +80,18 @@ public class Switch {
      * @param status Status of the switch. True indicates "ON" state and false indicates "OFF".
      * @throws IOException If GPIO status change fails.
      */
-    public void setStatus(boolean status)  {
+    public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    /**
+     * Get the icon for the switch.
+     *
+     * @return drawable of the icon.
+     */
+    @Exclude
+    public Drawable getIcon() {
+        return icon;
     }
 
     /**
@@ -78,11 +100,11 @@ public class Switch {
      * @return list of the {@link Switch}
      * @throws IOException If GPIO initialization fails.
      */
-    public static ArrayList<Switch> getSwitches() {
+    public static ArrayList<Switch> getSwitches(Context context) {
         ArrayList<Switch> switches = new ArrayList<>();
-        switches.add(new Switch(Constant.LED_PIN, false));
-        switches.add(new Switch(Constant.FAN_PIN, false));
-        switches.add(new Switch(Constant.LIGHT_BULB_PIN, false));
+        switches.add(new Switch(Constant.LED_PIN, false, ContextCompat.getDrawable(context,R.drawable.led_selector)));
+        switches.add(new Switch(Constant.FAN_PIN, false,ContextCompat.getDrawable(context,R.drawable.fan_selector)));
+        switches.add(new Switch(Constant.LIGHT_BULB_PIN, false,ContextCompat.getDrawable(context,R.drawable.bulb_selector)));
         return switches;
     }
 
