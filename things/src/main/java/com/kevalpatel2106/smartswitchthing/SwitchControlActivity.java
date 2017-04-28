@@ -53,7 +53,7 @@ public class SwitchControlActivity extends AppCompatActivity {
 //        }
 
         //Set the change listener.
-        mDatabaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (Switch s : mSwitches) {
