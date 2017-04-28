@@ -1,0 +1,38 @@
+language: android
+jdk: oraclejdk8
+sudo: false
+ 
+before_cache:
+    - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+cache:
+  directories:      #Cache all dirs under .gradle folder
+    - $HOME/.gradle/daemon      #Cache daemon logs
+    - $HOME/.gradle/native      #Cache library downloaded from the gradle dependency
+    - $HOME/.gradle/wrapper     #Cache the gradle
+    
+android:
+    update_sdk: true
+    components:
+        - platform-tools
+        - tools
+        - build-tools-25.0.2
+        - android-25
+
+        # Additional components
+        - extra-google-m2repository
+        - extra-android-m2repository
+
+licenses:
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+    - 'intel-android-extra-license'
+    
+before_script:
+    - chmod +x ./misc/download_keystore.sh
+    - bash ./misc/download_keystore.sh
+    - chmod +x gradlew      #Grant permissions
+    
+script:
+    - ./gradlew assembleDebug -PdisablePreDex --stacktrace
