@@ -35,4 +35,4 @@ before_script:
     - chmod +x gradlew      #Grant permissions
     
 script:
-    - ./gradlew assembleDebug -PdisablePreDex --stacktrace
+    - ./gradlew app:assembleDebug things:assembleDebug -PdisablePreDex --stacktrace
