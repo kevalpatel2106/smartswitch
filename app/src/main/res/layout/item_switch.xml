@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/switch_name_tv"
-        style="@style/Base.TextAppearance.AppCompat.Title"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Name"/>
-
-    <ToggleButton
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/switch_name_tv"
-        android:id="@+id/switch_status_toggel"/>
+        android:orientation="vertical"
+        android:padding="2dp">
 
-</RelativeLayout>
+        <ToggleButton
+            android:id="@+id/switch_status_toggel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff=""
+            android:textOn=""/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/switch_name_tv"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/switch_status_toggel"
+            android:layout_below="@id/switch_status_toggel"
+            android:background="@color/colorAccent"
+            android:elevation="4dp"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:translationZ="4dp"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
