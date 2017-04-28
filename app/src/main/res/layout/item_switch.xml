@@ -28,6 +28,7 @@
             android:layout_below="@id/switch_status_toggel"
             android:background="@color/colorAccent"
             android:elevation="4dp"
+            android:padding="5dp"
             android:text="Name"
             android:textAlignment="center"
             android:textAllCaps="true"
