@@ -2,4 +2,6 @@
 
 ### Control your switches from anywhere using android things and Raspberry Pie.
 
-[circuit](misc/SmartSwitch_diagram)
+## Circuit Diagram: 
+
+![circuit](misc/SmartSwitch_diagram)
